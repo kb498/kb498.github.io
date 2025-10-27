@@ -4,61 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kaushik Bhattacharya</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <style>
     body {
-      font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       background-color: #f9fafb;
       color: #222;
       margin: 0;
       padding: 0;
-      scroll-behavior: smooth;
     }
 
     header {
       background-color: #1f2937;
       color: white;
       text-align: center;
-      padding: 2.5rem 1rem 1rem 1rem;
+      padding: 3rem 1rem;
     }
 
     header h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       margin-bottom: 0.3rem;
     }
 
     header p {
       font-size: 1.1rem;
       opacity: 0.9;
-      margin-bottom: 1rem;
-    }
-
-    nav {
-      background-color: #374151;
-      padding: 0.75rem 0;
-      text-align: center;
-    }
-
-    nav a {
-      color: #e5e7eb;
-      text-decoration: none;
-      margin: 0 1.2rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: #60a5fa;
     }
 
     main {
-      max-width: 900px;
+      max-width: 800px;
       margin: 2rem auto;
       padding: 0 1.5rem;
       background: white;
@@ -66,12 +39,9 @@
       border-radius: 12px;
     }
 
-    section {
-      padding: 2rem 1rem;
-    }
-
     .profile {
       text-align: center;
+      padding: 2rem 1rem;
     }
 
     .profile img {
@@ -82,17 +52,19 @@
       border: 3px solid #1f2937;
     }
 
+    .bio {
+      text-align: left;
+      padding: 1rem 2rem 2rem 2rem;
+      line-height: 1.6;
+    }
+
     h2 {
       border-bottom: 2px solid #1f2937;
       padding-bottom: 0.3rem;
       margin-top: 2rem;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-    }
-
-    p, ul {
-      line-height: 1.6;
     }
 
     ul {
@@ -121,24 +93,7 @@
       text-decoration: underline;
     }
 
-    .contact-links a {
-      display: inline-flex;
-      align-items: center;
-      margin: 0.5rem;
-      font-size: 1rem;
-      color: #2563eb;
-    }
-
-    .contact-links i {
-      margin-right: 0.4rem;
-      font-size: 1.1rem;
-    }
-
     @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
       .bio {
         padding: 1rem;
       }
@@ -151,20 +106,17 @@
     <p>Management Consultant | Data Scientist</p>
   </header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
   <main>
-    <!-- HOME SECTION -->
-    <section id="home" class="profile">
+    <section class="profile">
+      <!-- Your profile picture -->
       <img src="pic1.jpg" alt="Kaushik Bhattacharya photo">
-      <p style="margin-top:1rem;">
+    </section>
+
+    <section class="bio">
+      <p>
         Welcome to my professional page. I’m a management consultant specializing in business analytics, 
-        AI, and data-driven decision-making. I advise corporations, institutions, and executives on 
-        evidence-based approaches to enterprise transformation and innovation.
+        AI, and data-driven decision-making. I advise corporations, institutions, and executives on evidence-based 
+        approaches to enterprise transformation and innovation.
       </p>
 
       <h2>Current Roles</h2>
@@ -180,46 +132,21 @@
           </a>
         </li>
       </ul>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="bio">
-      <h2>About</h2>
-      <p>
-        Kaushik Bhattacharya is an experienced management consultant and data scientist focused on helping 
-        organizations harness the power of advanced analytics and artificial intelligence to drive strategic growth. 
-        His work spans digital transformation, enterprise AI strategy, and innovation management. 
-      </p>
-      <p>
-        With an academic foundation at the University of Chicago’s Data Science Institute, 
-        Kaushik integrates evidence-based analytical frameworks into practical business problem-solving, 
-        bridging the gap between data science and executive decision-making.
-      </p>
 
       <h2>Expertise</h2>
       <ul>
         <li>Business Analytics & Data Science</li>
-        <li>AI & Gen AI Strategy</li>
+        <li>AI & Gen AI</li>
         <li>Enterprise Transformation & Innovation</li>
-        <li>Leadership & Management Consulting</li>
+        <li>Leadership & Management</li>
       </ul>
-    </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact">
       <h2>Contact</h2>
-      <p>Let’s connect professionally:</p>
-      <div class="contact-links">
-        <a href="mailto:kb498@cornell.edu">
-          <i class="fa-solid fa-envelope"></i> Email (Outlook)
-        </a><br>
-        <a href="https://linkedin.com/in/kb498" target="_blank">
-          <i class="fa-brands fa-linkedin"></i> LinkedIn
-        </a><br>
-        <a href="https://orcid.org/0009-0009-1831-1089" target="_blank">
-          <i class="fa-brands fa-orcid"></i> ORCID
-        </a>
-      </div>
+      <p>
+        📧 Email: <a href="mailto:kb498@cornell.edu">kb498@cornell.edu</a><br>
+        🔗 LinkedIn: <a href="https://linkedin.com/in/kb498" target="_blank">linkedin.com/in/kb498</a><br>
+        🧬 ORCID: <a href="https://orcid.org/0009-0009-1831-1089" target="_blank">orcid.org/0009-0009-1831-1089</a>
+      </p>
     </section>
   </main>
 
