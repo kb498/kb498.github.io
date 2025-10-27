@@ -1,11 +1,154 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>My First Website</title>
-  </head>
-  <body style="font-family: sans-serif; text-align: center; margin-top: 50px;">
-    <h1>Hello, world!</h1>
-    <p>Welcome to my first GitHub Pages site 🎉</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Jane Doe – Consultant & Researcher</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #f9fafb;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+    }
+
+    .profile {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .profile img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #1f2937;
+    }
+
+    .bio {
+      text-align: left;
+      padding: 1rem 2rem 2rem 2rem;
+      line-height: 1.6;
+    }
+
+    h2 {
+      border-bottom: 2px solid #1f2937;
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li::before {
+      content: "• ";
+      color: #1f2937;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .bio {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dr. Jane Doe</h1>
+    <p>Independent Consultant | Research Scientist | Lecturer</p>
+  </header>
+
+  <main>
+    <section class="profile">
+      <!-- Replace the link below with your own photo (must be online or in your repo) -->
+      <img src="https://via.placeholder.com/160" alt="Profile photo">
+    </section>
+
+    <section class="bio">
+      <p>
+        Welcome to my professional page. I’m a consultant and academic researcher
+        specializing in organizational strategy, leadership development, and
+        data-driven decision-making. I advise institutions and executives on
+        evidence-based approaches to performance and innovation.
+      </p>
+
+      <h2>Current Roles</h2>
+      <ul>
+        <li>Principal Consultant, Insight Strategy Group</li>
+        <li>Adjunct Professor, Department of Management, University of Somewhere</li>
+      </ul>
+
+      <h2>Expertise</h2>
+      <ul>
+        <li>Leadership & Change Management</li>
+        <li>Data Analytics & Policy Design</li>
+        <li>Organizational Behavior & Strategy</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>
+        📧 Email: <a href="mailto:jane.doe@example.com">jane.doe@example.com</a><br>
+        🔗 LinkedIn: <a href="https://linkedin.com/in/janedoe" target="_blank">linkedin.com/in/janedoe</a><br>
+        📄 CV: <a href="#" target="_blank">Download PDF</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Dr. Jane Doe. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
+
