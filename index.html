@@ -14,8 +14,7 @@
       --accent: #1d4ed8;
       --border: #e5e7eb;
       --radius: 14px;
-      --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-      --transition: all 0.3s ease;
+      --shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
     }
 
     * {
@@ -30,7 +29,6 @@
       color: var(--text);
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
     }
 
     main {
@@ -42,7 +40,6 @@
       box-shadow: var(--shadow);
       border-radius: var(--radius);
       overflow: hidden;
-      animation: fadeIn 0.8s ease-out;
     }
 
     /* LEFT PANEL */
@@ -53,13 +50,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 3rem 1.8rem;
-      position: sticky;
-      top: 2rem;
-      height: calc(100vh - 4rem);
-      align-self: flex-start;
-      border-radius: var(--radius);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.02);
+      padding: 3rem 1.8rem 3rem;
     }
 
     .sidebar img {
@@ -69,23 +60,18 @@
       object-fit: cover;
       border: 2px solid var(--border);
       margin-bottom: 1.2rem;
-      transition: var(--transition);
-      aspect-ratio: 1 / 1;
-      filter: brightness(0.98);
+      transition: transform 0.3s ease;
     }
 
     .sidebar img:hover {
-      transform: scale(1.04);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-      filter: brightness(1);
+      transform: scale(1.03);
     }
 
     .sidebar h1 {
       font-size: 1.3rem;
       font-weight: 600;
-      margin-bottom: 0.4rem;
       text-align: center;
-      letter-spacing: 0.3px;
+      margin-bottom: 0.3rem;
     }
 
     .sidebar p.role {
@@ -93,23 +79,17 @@
       color: var(--muted);
       text-align: center;
       margin-bottom: 2rem;
-      letter-spacing: 0.4px;
-    }
-
-    .role span {
-      color: #aaa;
-      margin: 0 0.4rem;
+      letter-spacing: 0.3px;
     }
 
     .links {
       font-size: 0.9rem;
-      line-height: 1.9;
+      line-height: 1.8;
       text-align: left;
       width: 100%;
       color: var(--muted);
       border-top: 1px solid var(--border);
       padding-top: 1.5rem;
-      animation: fadeInUp 1s ease both;
     }
 
     .links strong {
@@ -121,7 +101,7 @@
       color: var(--accent);
       text-decoration: none;
       word-break: break-all;
-      transition: var(--transition);
+      transition: color 0.2s ease;
     }
 
     .links a:hover {
@@ -132,70 +112,40 @@
     /* RIGHT PANEL */
     .content {
       flex: 1;
-      padding: 4rem 3rem 4rem 3.5rem;
-      background-color: var(--card-bg);
-      animation: fadeInUp 0.9s ease-out both;
+      padding: 3.5rem 3rem;
     }
 
     .content h2 {
       font-size: 0.9rem;
       text-transform: uppercase;
-      letter-spacing: 1.2px;
+      letter-spacing: 1.1px;
       color: #111;
       border-bottom: 1px solid var(--border);
       padding-bottom: 0.4rem;
-      margin-bottom: 1.4rem;
-      opacity: 0.9;
+      margin-bottom: 1.2rem;
     }
 
     .content p {
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.6rem;
       font-size: 1rem;
-      max-width: 95%;
       color: #333;
-      line-height: 1.75;
+      max-width: 95%;
     }
 
     .content a {
       color: var(--accent);
       text-decoration: none;
-      transition: var(--transition);
     }
 
     .content a:hover {
       text-decoration: underline;
-      color: #1e40af;
     }
 
     footer {
       text-align: center;
       font-size: 0.85rem;
       color: var(--muted);
-      padding: 2.5rem 1rem;
-      opacity: 0.9;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Scrollbar refinement */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #d1d5db;
-      border-radius: 10px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #9ca3af;
+      padding: 2rem 1rem;
     }
 
     @media (max-width: 900px) {
@@ -205,12 +155,9 @@
       }
 
       .sidebar {
-        position: relative;
-        height: auto;
-        top: 0;
         border-right: none;
         border-bottom: 1px solid var(--border);
-        border-radius: var(--radius) var(--radius) 0 0;
+        padding: 2rem 1.5rem;
       }
 
       .content {
@@ -228,7 +175,7 @@
     <aside class="sidebar">
       <img src="pic1.JPG" alt="Kaushik Bhattacharya photo" />
       <h1>Kaushik Bhattacharya</h1>
-      <p class="role">Management Consultant <span>|</span> Data Scientist</p>
+      <p class="role">Management Consultant | Data Scientist</p>
 
       <div class="links">
         <strong>Email:</strong><br>
