@@ -136,10 +136,29 @@
     .content a {
       color: var(--accent);
       text-decoration: none;
+      transition: color 0.2s ease;
     }
 
     .content a:hover {
       text-decoration: underline;
+      color: #1e40af;
+    }
+
+    .resume-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background-color: var(--accent);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+
+    .resume-link:hover {
+      background-color: #1e3a8a;
+      text-decoration: none;
     }
 
     footer {
@@ -207,6 +226,12 @@
           Frost Growth Expert, Frost &amp; Sullivan
         </a>
       </p>
+
+      <h2>Resume</h2>
+      <p>
+        You can view or download my resume below.
+      </p>
+      <a class="resume-link" href="KB498.pdf" target="_blank">View Resume (PDF)</a>
     </section>
   </main>
 
