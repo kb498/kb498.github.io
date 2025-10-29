@@ -7,14 +7,15 @@
 
   <style>
     :root {
-      --bg: #f7f8fa;
+      --bg: #f6f7f9;
       --card-bg: #ffffff;
-      --text: #222;
+      --text: #1a1a1a;
       --muted: #555;
       --accent: #1d4ed8;
       --border: #e5e7eb;
       --radius: 14px;
-      --shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      --transition: all 0.3s ease;
     }
 
     * {
@@ -27,128 +28,196 @@
       font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
       background-color: var(--bg);
       color: var(--text);
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
-      line-height: 1.6;
+      overflow-x: hidden;
     }
 
     main {
       display: flex;
       flex-direction: row;
-      max-width: 960px;
+      max-width: 1100px;
       margin: 4rem auto;
       background: var(--card-bg);
       box-shadow: var(--shadow);
       border-radius: var(--radius);
       overflow: hidden;
+      animation: fadeIn 0.8s ease-out;
     }
 
     /* LEFT PANEL */
     .sidebar {
-      flex: 0 0 300px;
+      flex: 0 0 320px;
       background-color: #f9fafb;
       border-right: 1px solid var(--border);
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 2.5rem 1.5rem;
+      padding: 3rem 1.8rem;
+      position: sticky;
+      top: 2rem;
+      height: calc(100vh - 4rem);
+      align-self: flex-start;
+      border-radius: var(--radius);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.02);
     }
 
     .sidebar img {
-      width: 140px;
-      height: 140px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid var(--border);
-      margin-bottom: 1.5rem;
-      transition: transform 0.3s ease;
+      margin-bottom: 1.2rem;
+      transition: var(--transition);
+      filter: brightness(0.98);
     }
 
     .sidebar img:hover {
-      transform: scale(1.03);
+      transform: scale(1.04);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      filter: brightness(1);
     }
 
     .sidebar h1 {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 600;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.4rem;
       text-align: center;
+      letter-spacing: 0.3px;
     }
 
-    .sidebar p {
-      font-size: 0.95rem;
+    .sidebar p.role {
+      font-size: 0.9rem;
       color: var(--muted);
       text-align: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      letter-spacing: 0.4px;
+    }
+
+    .role span {
+      color: #aaa;
+      margin: 0 0.4rem;
     }
 
     .links {
       font-size: 0.9rem;
-      line-height: 1.8;
+      line-height: 1.9;
       text-align: left;
       width: 100%;
       color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      animation: fadeInUp 1s ease both;
+    }
+
+    .links strong {
+      color: #111;
+      font-weight: 500;
     }
 
     .links a {
       color: var(--accent);
       text-decoration: none;
       word-break: break-all;
+      transition: var(--transition);
     }
 
     .links a:hover {
       text-decoration: underline;
+      color: #1e3a8a;
     }
 
     /* RIGHT PANEL */
     .content {
       flex: 1;
-      padding: 3rem 3rem 3.5rem;
+      padding: 4rem 3rem 4rem 3.5rem;
+      background-color: var(--card-bg);
+      animation: fadeInUp 0.9s ease-out both;
+    }
+
+    .content h2 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #111;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.4rem;
+      opacity: 0.9;
     }
 
     .content p {
-      margin-bottom: 1.3rem;
+      margin-bottom: 1.8rem;
       font-size: 1rem;
+      max-width: 95%;
+      color: #333;
+      line-height: 1.75;
     }
 
-    h2 {
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin: 2rem 0 0.8rem;
-      color: #111;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.3rem;
-    }
-
-    a {
+    .content a {
       color: var(--accent);
       text-decoration: none;
+      transition: var(--transition);
     }
 
-    a:hover {
+    .content a:hover {
       text-decoration: underline;
+      color: #1e40af;
     }
 
     footer {
       text-align: center;
       font-size: 0.85rem;
       color: var(--muted);
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
+      opacity: 0.9;
     }
 
-    @media (max-width: 800px) {
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Scrollbar refinement */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #d1d5db;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #9ca3af;
+    }
+
+    @media (max-width: 900px) {
       main {
         flex-direction: column;
         margin: 2rem 1rem;
       }
 
       .sidebar {
+        position: relative;
+        height: auto;
+        top: 0;
         border-right: none;
         border-bottom: 1px solid var(--border);
+        border-radius: var(--radius) var(--radius) 0 0;
       }
 
       .content {
         padding: 2rem 1.5rem;
+      }
+
+      .content p {
+        max-width: 100%;
       }
     }
   </style>
@@ -158,7 +227,7 @@
     <aside class="sidebar">
       <img src="pic1.JPG" alt="Kaushik Bhattacharya photo" />
       <h1>Kaushik Bhattacharya</h1>
-      <p>Management Consultant<br>Data Scientist</p>
+      <p class="role">Management Consultant <span>|</span> Data Scientist</p>
 
       <div class="links">
         <strong>Email:</strong><br>
@@ -177,6 +246,7 @@
     </aside>
 
     <section class="content">
+      <h2>Profile</h2>
       <p>
         Hello! I’m a management consultant specializing in business analytics, AI, and data-driven decision-making. 
         I advise corporations, institutions, and executives on evidence-based approaches to enterprise transformation and innovation.
@@ -187,12 +257,6 @@
         <a href="https://www.frost.com/frost-growth-experts/" target="_blank">
           Frost Growth Expert, Frost &amp; Sullivan
         </a>
-      </p>
-
-      <h2>Focus Areas</h2>
-      <p>
-        Business analytics · Artificial Intelligence · Strategic Transformation · 
-        Decision Science · Corporate Innovation
       </p>
     </section>
   </main>
