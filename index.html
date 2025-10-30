@@ -141,24 +141,32 @@
 
     .content a:hover {
       text-decoration: underline;
+    }
+
+    /* PDF icon link */
+    .pdf-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.95rem;
+      text-decoration: none;
+      color: var(--accent);
+    }
+
+    .pdf-link:hover {
       color: #1e40af;
     }
 
-    .resume-link {
-      display: inline-block;
-      margin-top: 0.5rem;
-      background-color: var(--accent);
-      color: #fff;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: background-color 0.2s ease;
+    .pdf-icon {
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+      fill: #d32f2f;
+      transition: transform 0.2s ease;
     }
 
-    .resume-link:hover {
-      background-color: #1e3a8a;
-      text-decoration: none;
+    .pdf-link:hover .pdf-icon {
+      transform: scale(1.1);
     }
 
     footer {
@@ -229,9 +237,13 @@
 
       <h2>Resume</h2>
       <p>
-        You can view or download my resume below.
+        <a href="KB498.pdf" target="_blank" class="pdf-link">
+          <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm8 1.5V8h4.5L14 3.5zm-3.2 7.85c.46-.03.85.04 1.18.21.34.18.6.45.8.8.21.36.31.78.31 1.28 0 .5-.1.92-.31 1.27-.2.36-.46.63-.8.81-.33.18-.72.25-1.18.22H10v1.56H8.8v-6.15h2zm-.04 1.04h-.98v2.4h.98c.33.02.6-.05.8-.2.2-.15.3-.4.3-.73s-.1-.58-.3-.74c-.2-.15-.47-.23-.8-.23z"/>
+          </svg>
+          View Resume (PDF)
+        </a>
       </p>
-      <a class="resume-link" href="KB498.pdf" target="_blank">View Resume (PDF)</a>
     </section>
   </main>
 
